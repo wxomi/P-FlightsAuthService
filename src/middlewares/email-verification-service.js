@@ -18,7 +18,7 @@ const emailVerificationSender = (req, res, next) => {
         email: req.body.email,
       },
       "ourSecretKey",
-      { expiresIn: "5m" }
+      { expiresIn: "10m" }
     );
 
     const mailConfigurations = {
