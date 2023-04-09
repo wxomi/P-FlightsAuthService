@@ -22,7 +22,7 @@ router.post(
   userController.signIn
 );
 
-router.post("/verify/:token", userController.validateEmail);
+router.get("/verify/:token", userController.validateEmail);
 
 router.get("/isAuthenticated", userController.isAuthenticated);
 
