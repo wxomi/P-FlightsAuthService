@@ -61,9 +61,8 @@ class UserService {
       if (user.isVerified === false) {
         throw { error: "Email is not Verified" };
       }
-      return user.id;
+      return response;
     } catch (error) {
-      console.log("Something went wrong in the Auth Process");
       throw error;
     }
   }

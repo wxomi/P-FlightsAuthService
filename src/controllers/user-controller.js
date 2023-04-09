@@ -60,7 +60,7 @@ const isAuthenticated = async (req, res) => {
       message: "User is authenticated and token is valid",
     });
   } catch (error) {
-    return res.status(500).json({
+    return res.status(401).json({
       message: "Unauthenticated Token",
       data: {},
       success: false,
