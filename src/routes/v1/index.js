@@ -32,4 +32,9 @@ router.get(
   userController.isAdmin
 );
 
+router.get("/ping", (req, res) => {
+  return res.status(200).json({
+    message: "pinged",
+  });
+});
 module.exports = router;
