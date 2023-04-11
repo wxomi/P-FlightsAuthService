@@ -12,8 +12,11 @@ class UserRepository {
         },
       });
       if (existingUser) {
-        console.log(existingUser);
-        throw { error: "User with this email already exists" };
+        throw {
+          message: "User with this email already exists",
+          statusCode: 409,
+          data: existingUser,
+        };
       }
       const user = await User.create(data);
       return user;

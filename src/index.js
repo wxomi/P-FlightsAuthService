@@ -3,6 +3,7 @@ const { Sequelize } = require("sequelize");
 
 const { PORT, DB_SYNC } = require("./config/serverConfig");
 const apiRoutes = require("./routes/index");
+const { User, Role } = require("./models/index");
 
 const db = require("./models/index");
 
@@ -33,6 +34,11 @@ const prepareAndStartServer = async () => {
   app.use("/authservice/api", apiRoutes);
   app.listen(PORT, async () => {
     console.log(`Server Started Successfully at ${PORT} .`);
+    // const u1 = await User.findByPk(1);
+    // const r1 = await Role.findByPk(1);
+    // u1.addRole(r1);
+    // const user = await r1.getUsers();
+    // console.log(user);
     if (DB_SYNC) {
       db.sequelize.sync({ alter: true });
     }

@@ -49,7 +49,6 @@ const emailVerificationSender = (req, res, next) => {
     transporter.sendMail(mailConfigurations, function (error, info) {
       if (error) throw Error(error);
       console.log("Email Sent Successfully");
-      console.log(info);
     });
     next();
   } catch (error) {
