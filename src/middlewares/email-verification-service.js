@@ -34,12 +34,12 @@ const emailVerificationSender = (req, res, next) => {
       text: `Thank you for signing up for our service! We just wanted to confirm your email address to ensure that we have the correct information on file.
 
       To complete the verification process, please click on the following link:
-      
-      https://pflightsauthservice.onrender.com/authservice/api/v1/verify/${token} 
 
-      
+      https://flightsauthservice.onrender.com/authservice/api/v1/verify/${token}
+
+
       If you did not sign up for our service, please disregard this email.
-      
+
       Thank you for your cooperation, and please do not hesitate to reach out to us if you have any questions or concerns.
       Best regards,
       Team 212
